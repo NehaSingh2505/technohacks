@@ -1,0 +1,33 @@
+import java.util.*;
+public class Calculator{
+    public static void main(String[] args){
+        int operation,firstNumber,secondNumber;
+        System.out.println("1-ADDITION \n 2-SUBTRACTION \n 3-MULTIPLICATION \n 4-DIVISION");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("choose operation:");
+        operation=sc.nextInt();
+        System.out.println("enter first number:");
+        firstNumber=sc.nextInt();
+        System.out.println("enter second number:");
+        secondNumber=sc.nextInt();
+
+        int result=0;
+        switch(operation){
+            case 1:result=firstNumber+secondNumber;
+            break;
+            case 2:result=firstNumber-secondNumber;
+            break;
+            case 3:result=firstNumber*secondNumber;
+            break;
+            case 4:result=firstNumber/secondNumber;
+            break;
+
+            default:
+                System.out.println("invalid operation");
+        }
+        System.out.println("RESULT= "+result);
+
+
+
+    }
+}
