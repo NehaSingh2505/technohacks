@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import static java.lang.Math.pow;
+
+class BinaryToDecimalConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("ENTER THE BINARY NUMBER:");
+        long binaryNumber = scanner.nextLong();
+        int i = 0, ans = 0, newValue = 0,indexValue=1;
+        while (binaryNumber != 0) {
+            int digitVlaue = (int) (binaryNumber % 10);
+                binaryNumber = binaryNumber / 10;
+                newValue=newValue+digitVlaue*indexValue;
+                indexValue=2*indexValue;
+            }
+            System.out.println("DECIMAL NUMBER="+newValue);
+
+        }
+    }
